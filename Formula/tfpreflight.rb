@@ -5,12 +5,12 @@
 class Tfpreflight < Formula
   desc "Check Terraform plans for predictable AWS apply failures"
   homepage "https://github.com/tfpreflight/tfpreflight"
-  version "0.1.0-beta.8"
+  version "0.1.0-beta.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.8/tfpreflight_0.1.0-beta.8_darwin_amd64.tar.gz"
-      sha256 "7b7968ade7e5ba816f323628e3156baedc99a3cde68c3737b8fd2302203d9003"
+      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.9/tfpreflight_0.1.0-beta.9_darwin_amd64.tar.gz"
+      sha256 "fed3129939af9ddf5a7d8b986721a9571763f3ca7b2b60a80b05060b3ba0f2fe"
 
       define_method(:install) do
         bin.install "tfpreflight"
@@ -18,8 +18,8 @@ class Tfpreflight < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.8/tfpreflight_0.1.0-beta.8_darwin_arm64.tar.gz"
-      sha256 "96fda3a73acac6d883afe55b7920afa0d1909faed6d7a39f0db6473e59003cd5"
+      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.9/tfpreflight_0.1.0-beta.9_darwin_arm64.tar.gz"
+      sha256 "abf02f15ea92d30db95fa0265bb156e741e89649883b4e6f9e5e9339b082c7b1"
 
       define_method(:install) do
         bin.install "tfpreflight"
@@ -30,16 +30,16 @@ class Tfpreflight < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.8/tfpreflight_0.1.0-beta.8_linux_amd64.tar.gz"
-      sha256 "1a4145598540104dda9eb74120bd332345d1cb59d4714a24644d15bd94ac960f"
+      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.9/tfpreflight_0.1.0-beta.9_linux_amd64.tar.gz"
+      sha256 "5a511d117dc5110a75666ff423cf694717368e765b2275b87a2f95b26ad6a036"
       define_method(:install) do
         bin.install "tfpreflight"
         bin.install_symlink bin/"tfpreflight" => "tfp"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.8/tfpreflight_0.1.0-beta.8_linux_arm64.tar.gz"
-      sha256 "e98d2764b469351a1518fd5d75e2437194b44a6990d35ce4bd06b5847187707c"
+      url "https://github.com/tfpreflight/tfpreflight/releases/download/v0.1.0-beta.9/tfpreflight_0.1.0-beta.9_linux_arm64.tar.gz"
+      sha256 "8ec7265c392c8c53e00dbec224734995242a6a24e0548bd13d164afda72854e9"
       define_method(:install) do
         bin.install "tfpreflight"
         bin.install_symlink bin/"tfpreflight" => "tfp"
